@@ -10,7 +10,7 @@ public class UnitSelectionHandler : MonoBehaviour
     [SerializeField] private LayerMask _layerMask = new LayerMask();
     private Camera _mainCamera;
 
-    private List<Unit> _selectedUnits = new List<Unit>();
+    public List<Unit> SelectedUnits { get; } = new List<Unit>();
 
     private void Start()
     {
@@ -21,12 +21,12 @@ public class UnitSelectionHandler : MonoBehaviour
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            foreach (Unit selectedUnit in _selectedUnits)
+            foreach (Unit selectedUnit in SelectedUnits)
             {
                 selectedUnit.Deselect();
             }
 
-            _selectedUnits.Clear();
+            SelectedUnits.Clear();
         }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
@@ -44,9 +44,9 @@ public class UnitSelectionHandler : MonoBehaviour
 
         if(!unit.isOwned) { return; }
 
-        _selectedUnits.Add(unit);
+        SelectedUnits.Add(unit);
 
-        foreach (Unit selectedUnit in _selectedUnits)
+        foreach (Unit selectedUnit in SelectedUnits)
         {
             selectedUnit.Select();
         }
