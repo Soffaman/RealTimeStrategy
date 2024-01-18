@@ -7,7 +7,10 @@ public class Targeter : NetworkBehaviour
 {
     private Targetable _target;
 
-    #region Server
+    public Targetable GetTarget()
+    {
+        return _target;
+    }
 
     [Command]
     public void CmdSetTarger(GameObject targetGameObject)
@@ -22,12 +25,4 @@ public class Targeter : NetworkBehaviour
     {
         _target = null;
     }
-
-    #endregion
-
-    #region Client
-
-
-
-    #endregion
 }
