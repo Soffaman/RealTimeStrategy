@@ -130,7 +130,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  _rb: {fileID: 0}
+  _rb: {fileID: 4432356984322383988}
   _destroyAfterSeconds: 5
   _launchForce: 10
 --- !u!54 &4432356984322383988
