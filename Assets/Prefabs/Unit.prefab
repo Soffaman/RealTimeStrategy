@@ -42,12 +42,13 @@ GameObject:
   - component: {fileID: 1734552487239637296}
   - component: {fileID: 6271831783775602617}
   - component: {fileID: 8992394904664644200}
+  - component: {fileID: 1755896490069350048}
   - component: {fileID: 5027911897383589936}
   - component: {fileID: 4664221373411048732}
-  - component: {fileID: 1755896490069350048}
   - component: {fileID: 1745088525018588154}
   - component: {fileID: 1431211602342199397}
   - component: {fileID: 5412351452785397776}
+  - component: {fileID: 16727767980157111}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -146,6 +147,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &1755896490069350048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4538304645326727035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8, y: 2.3127708, z: 2.6519399}
+  m_Center: {x: 0, y: 1.0063853, z: 0.0670948}
 --- !u!114 &5027911897383589936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,19 +225,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!65 &1755896490069350048
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4538304645326727035}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.8, y: 2.3127708, z: 2.6519399}
-  m_Center: {x: 0, y: 1.0063853, z: 0.0670948}
 --- !u!114 &1745088525018588154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +277,22 @@ MonoBehaviour:
   _fireRange: 11
   _fireRate: 1
   _rotationSpeed: 180
+--- !u!114 &16727767980157111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4538304645326727035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d766e369599294fb1c7462a4705228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  _maxHealth: 100
 --- !u!1 &5226148231733284997
 GameObject:
   m_ObjectHideFlags: 0

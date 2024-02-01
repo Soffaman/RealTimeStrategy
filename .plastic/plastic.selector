@@ -1,0 +1,4 @@
+repository "RealTimeStrategy@Soffaman@cloud"
+  path "/"
+    br "/main"
+    co "/main"

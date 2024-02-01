@@ -25,11 +25,6 @@ public class UnitSelectionHandler : MonoBehaviour
 
     private void Update()
     {
-        if(_player == null)
-        {
-            _player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
-        }
-
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             StartSelectionArea();
@@ -102,6 +97,11 @@ public class UnitSelectionHandler : MonoBehaviour
 
         Vector2 min = _unitSelectionArea.anchoredPosition - (_unitSelectionArea.sizeDelta / 2);
         Vector2 max = _unitSelectionArea.anchoredPosition + (_unitSelectionArea.sizeDelta / 2);
+
+        if (_player == null)
+        {
+            _player = NetworkClient.connection?.identity.GetComponent<RTSPlayer>();
+        }
 
         foreach (Unit unit in _player.GetMyUnits())
         {
