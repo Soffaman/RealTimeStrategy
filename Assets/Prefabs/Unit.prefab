@@ -195,6 +195,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  _health: {fileID: 16727767980157111}
   _unitMovement: {fileID: 5027911897383589936}
   _targeter: {fileID: 1431211602342199397}
   _onSelected:
