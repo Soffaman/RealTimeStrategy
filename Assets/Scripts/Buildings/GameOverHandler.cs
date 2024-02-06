@@ -1,10 +1,12 @@
 using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameOverHandler : NetworkBehaviour
 {
+    public static event Action<string> ClientOnGameOver;
 
     private List<UnitBase> _bases = new List<UnitBase>();
 
@@ -32,14 +34,22 @@ public class GameOverHandler : NetworkBehaviour
     {
         _bases.Remove(unitBase);
 
-        if(_bases.Count != 1) { return; }
+        if (_bases.Count != 1) { return; }
 
-        Debug.Log("Game Over");
+        int playerId = _bases[0].connectionToClient.connectionId;
+
+        RpcGameOver($"Player {playerId}");
     }
 
     #endregion
 
     #region Client
+
+    [ClientRpc]
+    private void RpcGameOver(string winner)
+    {
+        ClientOnGameOver?.Invoke(winner);
+    }
 
     #endregion
 }
