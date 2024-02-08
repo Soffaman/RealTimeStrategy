@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5060365299948077114}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AimAtPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 5412351452785397776}
   - component: {fileID: 16727767980157111}
   - component: {fileID: 4960527017689355149}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5952629832154737868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ProjectileSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1522846504034059853}
   - component: {fileID: 713411852512994927}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SelectedHighlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,6 +486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tank with lazer cannon
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32b31d30c11fd441e8a3505f45293f66, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b31d30c11fd441e8a3505f45293f66, type: 3}
 --- !u!4 &4139359439902714526 stripped
@@ -500,6 +504,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4538304645326727034}
     m_Modifications:
+    - target: {fileID: 6202718441831364844, guid: 17980f4d84c474f4e99f3e7ddd418da7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6202718441995530883, guid: 17980f4d84c474f4e99f3e7ddd418da7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6202718442956127576, guid: 17980f4d84c474f4e99f3e7ddd418da7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -587,6 +599,10 @@ PrefabInstance:
     - target: {fileID: 6202718442956127578, guid: 17980f4d84c474f4e99f3e7ddd418da7, type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6202718442956127578, guid: 17980f4d84c474f4e99f3e7ddd418da7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6202718442956127578, guid: 17980f4d84c474f4e99f3e7ddd418da7, type: 3}
       propertyPath: m_IsActive
