@@ -1,6 +1,7 @@
 using Mirror;
 using UnityEngine.AI;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 public class UnitMovement : NetworkBehaviour
@@ -26,7 +27,7 @@ public class UnitMovement : NetworkBehaviour
     {
         Targetable target = _targeter.GetTarget();
 
-        if(target != null)
+        if (target != null)
         {
             if ((target.transform.position - transform.position).sqrMagnitude > _chaseRange * _chaseRange)
             {
@@ -49,6 +50,12 @@ public class UnitMovement : NetworkBehaviour
 
     [Command]
     public void CmdMove(Vector3 position)
+    {
+        ServerMove(position);
+    }
+
+    [Server]
+    public void ServerMove(Vector3 position)
     {
         _targeter.ClearTarget();
 
