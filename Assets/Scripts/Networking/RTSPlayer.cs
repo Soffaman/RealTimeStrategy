@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class RTSPlayer : NetworkBehaviour
 {
+    [SerializeField] private Transform _cameraTransform;
     [SerializeField] private LayerMask buildingBlockLayer = new LayerMask();
     [SerializeField] private Building[] _buildings = new Building[0];
     [SerializeField] private float buildingRangeLimit = 5f;
@@ -18,6 +19,11 @@ public class RTSPlayer : NetworkBehaviour
     private Color _teamColor = new Color();
     private List<Unit> _myUnits = new List<Unit>();
     private List<Building> _myBuildings = new List<Building>();
+
+    public Transform GetCameraTransform()
+    {
+        return _cameraTransform;
+    }
 
     public Color GetTeamColor()
     {
