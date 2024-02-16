@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8077986075778067360}
   - component: {fileID: 8077986075778067367}
   - component: {fileID: 7996381630094793718}
+  - component: {fileID: 6573874800787769531}
   m_Layer: 0
   m_Name: Building
   m_TagString: Untagged
@@ -130,6 +131,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  _buildingPreview: {fileID: 0}
   _icon: {fileID: 0}
   _id: -1
   _price: 100
@@ -149,6 +151,22 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   aimAtPoint: {fileID: 0}
+--- !u!114 &6573874800787769531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077986075778067365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e5d726c0a3bbf4a9bac1032faf7217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  colorRenderers: []
 --- !u!1001 &8077986075551487335
 PrefabInstance:
   m_ObjectHideFlags: 0
