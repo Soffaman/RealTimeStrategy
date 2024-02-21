@@ -22,6 +22,8 @@ public class UnitSelectionHandler : MonoBehaviour
     {
         _mainCamera = Camera.main;
 
+        _player = NetworkClient.connection?.identity.GetComponent<RTSPlayer>();
+
         Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawned;
         GameOverHandler.ClientOnGameOver += ClientHandleGameOver;
     }
@@ -106,11 +108,6 @@ public class UnitSelectionHandler : MonoBehaviour
 
         Vector2 min = _unitSelectionArea.anchoredPosition - (_unitSelectionArea.sizeDelta / 2);
         Vector2 max = _unitSelectionArea.anchoredPosition + (_unitSelectionArea.sizeDelta / 2);
-
-        if (_player == null)
-        {
-            _player = NetworkClient.connection?.identity.GetComponent<RTSPlayer>();
-        }
 
         foreach (Unit unit in _player.GetMyUnits())
         {

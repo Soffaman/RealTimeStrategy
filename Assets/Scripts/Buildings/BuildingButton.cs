@@ -27,17 +27,14 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         _iconImage.sprite = _building.GetIcon();
         _priceText.text = _building.GetPrice().ToString();
 
+        _player = NetworkClient.connection?.identity.GetComponent<RTSPlayer>();
+
         _buildingCollider = _building.GetComponent<BoxCollider>();
 
     }
 
     private void Update()
     {
-        if (_player == null)
-        {
-            _player = NetworkClient.connection?.identity.GetComponent<RTSPlayer>();
-        }
-
         if(_buildingPreviewInstance == null) { return; }
 
         UpdateBuildingPreview();
