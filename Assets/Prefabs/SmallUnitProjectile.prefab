@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 592227729042372428, guid: 017fdc2bbb1c94b64a422d4db9e5d2c7, type: 3}
@@ -69,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4426467641377853408, guid: 017fdc2bbb1c94b64a422d4db9e5d2c7, type: 3}
       propertyPath: _assetId
-      value: 1820532529
+      value: 3777020759
       objectReference: {fileID: 0}
     - target: {fileID: 7172368909587070931, guid: 017fdc2bbb1c94b64a422d4db9e5d2c7, type: 3}
       propertyPath: _launchForce
@@ -84,4 +85,7 @@ PrefabInstance:
       value: SmallUnitProjectile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 017fdc2bbb1c94b64a422d4db9e5d2c7, type: 3}
